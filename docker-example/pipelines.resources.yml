@@ -1,0 +1,15 @@
+resources:
+  - name: myDockerRepo
+    type: GitRepo
+    configuration:
+      gitProvider: myGitHub
+      path: kfiravr2/pipelines-examples     # Replace with your Git repo  
+    branches:
+        include: master
+ 
+  - name: build_info_1_docker_build_push
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: Artifactory_GCP
+      buildName: svc_build
+      buildNumber: 1
