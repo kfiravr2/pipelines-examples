@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: GitHub_kfiravr2
-      path: kfiravr2/pipelines-examples/hello-world
+      path: kfiravr2/pipelines-examples/
 
 pipelines:
   - name: pipeline_hello_world
