@@ -16,12 +16,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: slack
+            - name: myAppRepo
         execution:
-          onComplete:
-            - send_notification slack --text "Hello"
-          onFailure:
-            - send_notification slack --text "The build failed"
-         # onExecute:
-          #  - send_notification slack --text "Hello". ##- echo $MY_MESSAGE
-           # - echo “running CI for master”
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo "running CI for master"
