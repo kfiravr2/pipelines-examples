@@ -2,7 +2,7 @@ resources:
   - name: myAppRepo
     type: GitRepo
     configuration:
-      gitProvider: GitHub_kfiravr2
+      gitProvider: github_admin
       path: kfiravr2/pipelines-examples/
 
 pipelines:
