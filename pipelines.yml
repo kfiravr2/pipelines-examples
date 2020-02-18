@@ -3,12 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: github_admin
-      path: kfiravr2/pipelines-examples
-      
-  - name: cron_trigger
-    type: CronTrigger
-    configuration:
-      interval: '*/5 * * * *'     # Every 5 minutes
+      path: kfiravr2/pipelines-examples    
 
 pipelines:
   - name: pipeline_hello_world
@@ -26,14 +21,4 @@ pipelines:
           onExecute:
             - echo $MY_MESSAGE
             - echo "running CI for master"
-            
-   - name: pipeline_scheduled_triggers
-     steps:
-       - name: step_1
-         type: Bash
-         configuration:
-           inputResources:
-            - name: cron_trigger
-         execution:
-           onExecute:
-             - printenv
+           
